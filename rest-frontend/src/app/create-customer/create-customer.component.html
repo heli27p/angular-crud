@@ -1,0 +1,28 @@
+<div class="col-md-6 offset-md-3">
+
+  <h3>Create Customer</h3>
+
+  <form (ngSubmit)="onSubmit()">
+    <div class="mb-3 form-group">
+      <label>First Name</label>
+      <input type="text" class="form-control" id="firstName" [(ngModel)]="customer.firstName" name="firstName" required/>
+    </div>
+
+    <div class="mb-3 form-group">
+      <label>Last Name</label>
+      <input type="text" class="form-control" id="lastName" [(ngModel)]="customer.lastName" name="lastName" required/>
+    </div>
+
+    <div class="mb-3 form-group">
+      <label>Age</label>
+      <input type="number" class="form-control" id="age" min="0" max="120" step="1" [(ngModel)]="customer.age" name="age" required/>
+    </div>
+
+    <div class="mb-3 form-group">
+      <label>Occupation</label>
+      <input type="text" class="form-control" id="occupation" [(ngModel)]="customer.occupation" name="occupation" required/>
+    </div>
+
+    <button class="btn btn-success" type="submit">Submit</button>
+  </form>
+</div>
